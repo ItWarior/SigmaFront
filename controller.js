@@ -11,7 +11,7 @@ function logInPage() {
         await signInPostPage(ev);
     }
     const loginPage = document.querySelector('.login');
-    loginPage.onclick = (ev) => {
+    loginPage.onclick = () => {
         logInPage();
     }
     const sendFormBtn = document.querySelector('#sendFormBtn');
@@ -29,7 +29,7 @@ function postsPageAtBegin(posts) {
         await signInPostPage(ev);
     }
     const loginPage = document.querySelector('.login');
-    loginPage.onclick = (ev) => {
+    loginPage.onclick = () => {
         logInPage();
     }
 }//postsPage at the begin
@@ -48,7 +48,7 @@ function mainPage(helpInfo) {
         await signInPostPageFromMain(ev);
     }
     const userHref = document.querySelector('.users');
-    userHref.onclick = async (ev) => {
+    userHref.onclick = async () => {
         await signInUserPageFromMain(getAccessToken());
     }
     const loginPage = document.querySelector('.logOut');
