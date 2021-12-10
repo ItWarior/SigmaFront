@@ -1,13 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background: tan;
+
+body {
+    background-color: tan;
 }
 
-#menu{
+#menu {
     width: 100%;
     height: 50px;
     background: rebeccapurple;
@@ -15,25 +16,38 @@ body{
     display: flex;
     justify-content: flex-end;
     position: fixed;
+    background: linear-gradient(
+            190deg, #4c1243, #b500e02e);
 }
-#menu > ul{
+
+#menu > ul {
     padding-right: 2rem;
     display: flex;
     align-items: center;
 }
-#menu > .userName{
+
+#menu > .userName {
     position: absolute;
     left: 10px;
 }
-#menu > ul > span{
+
+#menu > ul > span {
     font-weight: bold;
     cursor: pointer;
     letter-spacing: 2px;
 }
-#content{
-    padding-top: 50px;
+
+#menu > ul > span:hover {
+    color: tomato;
 }
-#content > #loginPage{
+
+#content {
+    background-blend-mode: screen;
+    padding-top: 50px;
+    height: 100%;
+}
+
+#content > #loginPage {
     width: 100%;
     height: calc(100vh - 50px);
     display: flex;
@@ -41,21 +55,345 @@ body{
     align-items: center;
     flex-direction: column;
 }
-#content > #loginPage > #loginForm{
+
+#content > #loginPage > #loginForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#content > #loginPage > #loginForm > input{
+
+#content > #loginPage > #loginForm > input {
+    border: 2px solid #8c536f;
+    border-radius: 10px;
     margin-bottom: 20px;
     height: 30px;
 }
-#content > #loginPage > #sendFormBtn{
+
+#content > #loginPage > #sendFormBtn {
     cursor: pointer;
     width: 100px;
     height: 25px;
     background: blueviolet;
     font-weight: bold;
     color: white;
+    border-radius: 5px
 }
+#content > #loginPage > #sendFormBtn:active{
+    color: green;
+}
+#content > #loginPage > #sendFormBtn:hover{
+    background-color: #71375b;
+}
+
+#content > .posts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 100px 20px 100px;
+}
+
+#content > .posts > .post {
+    margin-bottom: 20px;
+    border: 1px solid #adadad;
+}
+
+#content > .posts > .post > .text {
+    word-wrap: break-word;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 6px;
+    background: linear-gradient(240deg, #8370a5b5, transparent)
+}
+
+#menu > .userName {
+    color: tomato;
+    font-size: 16px;
+    height: 100%;
+    padding-top: 12px;
+}
+#content > .usersInMain {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 100px 20px 100px;
+}
+#content > .usersInMain > .usersLogBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content > .usersInMain > .usersLogBlock > .findInputUser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content > .usersInMain > .usersLogBlock > .findInputUser > .findUserBtn{
+    background: #d3afa9;
+    font-weight: 600;
+    border: 2px solid #a1677d;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+#content > .usersInMain > .usersLogBlock > .findInputUser > .findUserBtn:hover{
+    background: #f6644d;
+}
+#content > .usersInMain > .usersLogBlock > .findInputUser > .findUserInput{
+    border: 2px solid #8c536f;
+    border-radius: 10px;
+    height: 25px;
+}
+#content > .usersInMain > .usersLogBlock >.createUserPage{
+    background: #f6644d;
+    width: 156px;
+    font-size: large;
+    font-weight: 600;
+    border: 2px solid #a1677d;
+    border-radius: 10px;
+    margin: 10px;
+    height: 27px;
+    cursor: pointer;
+}
+#content > .usersInMain > .usersLogBlock >.createUserPage:hover{
+    background-color: #4c1243;
+}
+
+#content > .usersInMain > .user {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(90, 87, 91, 0.4);
+    margin: 10px;
+    padding: 10px;
+}
+
+#content > .mainPosts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 100px 20px 100px;
+}
+#content > .mainPosts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 100px 20px 100px;
+}
+#content > .mainPosts > .postLogBlock{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+#content > .mainPosts > .postLogBlock > .createPostPage{
+    background: #f6644d;
+    width: 170px;
+    font-size: large;
+    font-weight: 600;
+    border: 2px solid #a1677d;
+    border-radius: 10px;
+    margin: 10px;
+    height: 27px;
+    cursor: pointer;
+}
+#content > .mainPosts > .postLogBlock > .findInputPost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content > .mainPosts > .postLogBlock > .findInputPost > .findPostInput{
+    border: 2px solid #8c536f;
+    border-radius: 10px;
+    height: 25px;
+}
+#content > .mainPosts > .postLogBlock > .findInputPost > .findPostBtn{
+    background: #d3afa9;
+    font-weight: 600;
+    border: 2px solid #a1677d;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+#content > .mainPosts > .post {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(90, 87, 91, 0.4);
+    margin: 10px;
+    padding: 10px;
+}
+
+#content > .mainPosts > .post > .text {
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+#content > .mainPosts > .post > .timestamp {
+    display: flex;
+    justify-content: space-between;
+}
+
+#content > .mainPosts > .post > .timestamp > .createAt {
+    font-size: 18px;
+}
+
+#content > .mainPosts > .post > .timestamp > .updateAt {
+    font-size: 18px;
+}
+#content > .mainPosts > .post > .postBtnBlock {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+#content > .mainPosts > .post > .postBtnBlock > .updatePost {
+     cursor: pointer;
+     color: blue;
+}
+#content > .mainPosts > .post > .postBtnBlock > .deletePost {
+     cursor: pointer;
+     color: red;
+}
+
+#content > .mainTitle {
+    text-align: center;
+    font-size: 50px;
+    background-color: #91cf91;
+    opacity: 0.7;
+    clip-path: polygon(0 16%, 100% 0%, 100% 81%, 0% 100%);
+}
+#content > .userBlock{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #b79bc3;
+    background: #8fed5261;
+}
+#content > .userBlock > .logicBlock > .avatar{
+    width: 250px;
+    height: 200px;
+    margin-bottom: 10px
+}
+#content > .userBlock > .logicBlock > .avatar > img{
+    width: 100%;
+    height: 100%;
+}
+#content > .userBlock > .logicBlock > button{
+    margin-left: 15px;
+    width: 100px;
+    height: 30px;
+}
+#content > .userBlock > .logicBlock > button:hover{
+    background: green;
+}
+#content > .userBlock > .userData{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    font-size: larger;
+    font-weight: 700;
+    font-family: system-ui;
+}
+#content > .fonUpdateUser{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    padding-top: 20px;
+}
+#content > .fonUpdateUser > .updateForm{
+    position: absolute;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     width: 50%;
+}
+#content > .fonUpdateUser > .updateForm > .closeUpdate{
+    position: absolute;
+    width: 20px;
+    background: chocolate;
+    right: 0;
+    top: 0;
+}
+#content > .fonUpdateUser > .updateForm > input{
+    margin-bottom: 10px;
+}
+#content > .fonUpdateUser > .updateForm > .sendToUpdate{
+    width: 35%;
+    height: 25px;
+    color: chocolate;
+    font-size: initial;
+    font-weight: 600;
+    background-color: #72395d;
+    border-radius: 10px;
+}
+#content > .fonUpdateUser > .updateForm > .sendToUpdate:hover{
+    background-color: #c97ead;
+}
+#content > .createPage{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    padding-top: 20px;
+}
+#content > .createPage > .createForm{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+}
+#content > .createPage > .createForm >.closeCreate{
+    position: absolute;
+    width: 20px;
+    background: chocolate;
+    right: 0;
+    top: 0;
+}
+#content > .createPage > .createForm >input{
+    margin-bottom: 10px;
+}
+#content > .createPage > .createForm >.sendToCreate{
+    width: 35%;
+    height: 25px;
+    color: chocolate;
+    font-size: initial;
+    font-weight: 600;
+    background-color: #72395d;
+    border-radius: 10px;
+}
+#content > .createPagePost{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    padding-top: 20px
+}#content > .createPagePost > .newPostBlock{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 80%;
+}
+#content > .createPagePost > .newPostBlock> .closeBtnPost{
+    position: absolute;
+    width: 20px;
+    background: chocolate;
+    right: 0;
+    top: 0;
+}
+#content > .createPagePost >.newPostBlock>.textUser{
+    height: 200px;
+    background: beige;
+    margin-bottom: 20px
+}
+#content > .createPagePost >.newPostBlock>.sendPost{
+    width: 35%;
+    height: 25px;
+    color: chocolate;
+    font-size: initial;
+    font-weight: 600;
+    background-color: #72395d;
+    border-radius: 10px;
+}
+
