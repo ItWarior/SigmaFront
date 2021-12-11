@@ -1,1 +1,1 @@
-const connectionString = 'http://localhost:3000';
+const connectionString = 'https://single-back.herokuapp.com/';
