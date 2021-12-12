@@ -1,2 +1,2 @@
-const connectionString = 'https://single-back.herokuapp.com/';
+const connectionString = 'https://simple-page-back.herokuapp.com';
 
