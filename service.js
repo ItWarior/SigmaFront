@@ -9,7 +9,7 @@ async function logIn() {
         return
     }
 
-    const response = await fetch(`${connectionString}auth/log-in`, {
+    const response = await fetch(`${connectionString}/auth/log-in`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -28,7 +28,7 @@ async function logIn() {
 }
 
 async function refreshTokens() {
-    const response = await fetch(`${connectionString}auth/refresh`, {
+    const response = await fetch(`${connectionString}/auth/refresh`, {
         method: 'POST',
         headers:{
             authorization: getAccessToken(),
@@ -51,7 +51,7 @@ async function refreshTokens() {
 }
 
 async function logOut(accessToken) {
-    const response = await fetch(`${connectionString}auth/log-out`, {
+    const response = await fetch(`${connectionString}/auth/log-out`, {
         method: 'POST',
         headers: {
             authorization: accessToken
@@ -74,7 +74,7 @@ async function logOut(accessToken) {
 
 //POSTS ROUT
 async function signInPostPage() {
-    const response = await fetch(`${connectionString}posts/`);
+    const response = await fetch(`${connectionString}/posts/`);
     const {status} = await isError(response);
     if (status) {
         return
@@ -86,7 +86,7 @@ async function signInPostPage() {
 }
 
 async function signInPostPageFromMain() {
-    const response = await fetch(`${connectionString}posts/`);
+    const response = await fetch(`${connectionString}/posts/`);
     const {status} = await isError(response);
     if (status) {
         return
@@ -97,7 +97,7 @@ async function signInPostPageFromMain() {
     postsPageFromMain(POSTS);
 }
 async function createPost(accessToken, post) {
-    const response = await fetch(`${connectionString}posts/`, {
+    const response = await fetch(`${connectionString}/posts/`, {
         method: 'POST',
         headers: {
             authorization: accessToken,
@@ -117,7 +117,7 @@ async function createPost(accessToken, post) {
     await signInPostPageFromMain();
 }
 async function findPostByUserId(accessToken, userId) {
-    const response = await fetch(`${connectionString}posts/${userId}`, {
+    const response = await fetch(`${connectionString}/posts/${userId}`, {
         method: 'GET',
         headers: {
             authorization: accessToken,
@@ -138,7 +138,7 @@ async function findPostByUserId(accessToken, userId) {
     postsPageFromMain(POSTS);
 }
 async function deletePost(accessToken, postId) {
-    const response = await fetch(`${connectionString}posts/${postId}`, {
+    const response = await fetch(`${connectionString}/posts/${postId}`, {
         method: 'DELETE',
         headers: {
             authorization: accessToken,
@@ -156,7 +156,7 @@ async function deletePost(accessToken, postId) {
     await signInPostPageFromMain();
 }
 async function updatePost(accessToken, newPost, postId) {
-    const response = await fetch(`${connectionString}posts/${postId}`, {
+    const response = await fetch(`${connectionString}/posts/${postId}`, {
         method: 'PUT',
         headers: {
             authorization: accessToken,
@@ -177,7 +177,7 @@ async function updatePost(accessToken, newPost, postId) {
 }
 //USERS ROUT
 async function signInUserPageFromMain(accessToken) {
-    const response = await fetch(`${connectionString}users/`, {
+    const response = await fetch(`${connectionString}/users/`, {
         method: 'GET',
         headers: {
             authorization: accessToken,
@@ -195,7 +195,7 @@ async function signInUserPageFromMain(accessToken) {
     usersPage(USERS);
 }
 async function deleteCurrentUser(accessToken) {
-    const response = await fetch(`${connectionString}users/${CURRENT_USER._id}`, {
+    const response = await fetch(`${connectionString}/users/${CURRENT_USER._id}`, {
         method: 'DELETE',
         headers: {
             authorization: accessToken,
@@ -214,7 +214,7 @@ async function deleteCurrentUser(accessToken) {
 }
 async function updateCurrentUser(accessToken, user) {
     const changedUser= {...CURRENT_USER, ...user};
-    const response = await fetch(`${connectionString}users/${CURRENT_USER._id}`, {
+    const response = await fetch(`${connectionString}/users/${CURRENT_USER._id}`, {
         method: 'PUT',
         headers: {
             authorization: accessToken,
@@ -235,7 +235,7 @@ async function updateCurrentUser(accessToken, user) {
     mainPage(CURRENT_USER.name);
 }
 async function createUser(accessToken, user) {
-    const response = await fetch(`${connectionString}users/`, {
+    const response = await fetch(`${connectionString}/users/`, {
         method: 'POST',
         headers: {
             authorization: accessToken,
@@ -256,7 +256,7 @@ async function createUser(accessToken, user) {
 
 }
 async function findUserById(accessToken, userId) {
-    const response = await fetch(`${connectionString}users/${userId}`, {
+    const response = await fetch(`${connectionString}/users/${userId}`, {
         method: 'GET',
         headers: {
             authorization: accessToken,
